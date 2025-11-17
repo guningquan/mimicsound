@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>mimicsonic</title>
+  <title>MimicSound</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
@@ -84,7 +84,7 @@
     <div class="container">
       <div class="container has-text-centered">
         <h1 class="title is-1 publication-title">
-          MimicSonic: Learning Bimanual Manipulation  <span style="display: block;"> from Audio-Visual Human Videos </span>
+          MimicSound: Learning Bimanual Manipulation  <span style="display: block;"> from Audio-Visual Human Videos </span>
           <!-- TactileAloha: <span style="display: block;">Learning to Manipulate with Tactile Sensing</span> -->
       </h1>
         <div class="is-size-5 publication-authors" style="display: flex; justify-content: center; gap: 30px;">
@@ -123,7 +123,7 @@
 
     <!-- ML Code Link -->
     <span class="link-block">
-      <a href="https://anonymous.4open.science/r/hierarchical-llm-robotics-0238/README.md"
+      <a href="https://github.com/guningquan/mimicsound-ml"
          class="external-link button is-normal is-rounded is-dark">
         <span class="icon">
           <i class="fab fa-github"></i>
@@ -155,12 +155,12 @@
         <div class="content has-text-justified">
           <p>
             Learning robot manipulation from human visual videos has shown promise, but leveraging human audio-visual demonstrations for audio-visual-related tasks remains underexplored.
-            To address it, we propose MimicSonic, a unified End2End audio-visual imitation learning framework that novelly co-trains on human and robot audio-visual demonstrations using a dual-branch design.
+            To address it, we propose MimicSound, a unified End2End audio-visual imitation learning framework that novelly co-trains on human and robot audio-visual demonstrations using a dual-branch design.
             Human-robot data collection employs a shared top-view camera and microphone to ensure spatial and auditory alignment, with human audio augmented by robot noise to reduce cross-domain gaps.
             To achieve temporal consistency, we introduce Timestep-aligned Audio Synchronization for per-step multimodal alignment in robot data, and Marker-based Human-Robot Demonstration Alignment for phase-wise speed alignment between the two data sources across long-horizon tasks.
-            During training, MimicSonic adopts a shared audio-visual encoder: the vision module encodes top-view robot images or hand-masked human images to mitigate domain bias, while the shared audio encoder, based on a pretrained Audio Spectrogram Transformer (AST) fine-tuned via Weight-Decomposed Low-Rank Adaptation (DoRA), extracts unified auditory representations for both branches.
+            During training, MimicSound adopts a shared audio-visual encoder: the vision module encodes top-view robot images or hand-masked human images to mitigate domain bias, while the shared audio encoder, based on a pretrained Audio Spectrogram Transformer (AST) fine-tuned via Weight-Decomposed Low-Rank Adaptation (DoRA), extracts unified auditory representations for both branches.
             Two Bidirectional Cross-modal Attention Modules then dynamically fuse audio and visual features in each branch before feeding them into the Action Chunking with Transformers (ACT) policy.
-            We evaluate MimicSonic on three bimanual audio-visual tasks, demonstrating the advantage of learning from human audio-visual demonstrations, while ablations show the contribution of each component.
+            We evaluate MimicSound on three bimanual audio-visual tasks, demonstrating the advantage of learning from human audio-visual demonstrations, while ablations show the contribution of each component.
           </p>
         </div>
       </div>
@@ -190,7 +190,7 @@
          style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
   <p style="margin-top: 12px; font-size: 0.95em; color: #444; line-height: 1.6; text-align: justify;">
-Fig. 1. Overview of the MimicSonic.
+Fig. 1. Overview of the MimicSound.
 		The framework adopts a dual-branch design for human and robot data. 
 		In the robot branch, multi-view RGB images $o_{R,t}^{cams}$ serve as visual inputs: 
 		the left and right arm views are encoded by ResNet models pre-trained on ImageNet, 
@@ -233,7 +233,7 @@ Fig. 1. Overview of the MimicSonic.
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-bottom: 20px;">
           <video autoplay controls muted loop playsinline 
                  style="width: 100%; max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-            <source src="./static/videos/hierarchical-llm-robotics-demos.mp4" type="video/mp4">
+            <source src="./static/videos/mimicsound-demo.mp4" type="video/mp4">
           </video>
         </div>
       </div>
