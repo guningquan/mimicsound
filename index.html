@@ -154,8 +154,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Learning robot manipulation from human visual videos has shown promise, but leveraging human audio-visual demonstrations for audio-visual-related tasks remains underexplored.
-            To address it, we propose MimicSound, a unified End2End audio-visual imitation learning framework that novelly co-trains on human and robot audio-visual demonstrations using a dual-branch design.
+            Learning robot manipulation from human visual videos has shown promise, but leveraging audio information in human data remains underexplored.
+            To address it, we propose MimicSound, a unified End2End audio-visual imitation learning framework that novelly co-trains on human audio-visual data together with robot demonstrations using a dual-branch design.
             Human-robot data collection employs a shared top-view camera and microphone to ensure spatial and auditory alignment, with human audio augmented by robot noise to reduce cross-domain gaps.
             To achieve temporal consistency, we introduce Timestep-aligned Audio Synchronization for per-step multimodal alignment in robot data, and Marker-based Human-Robot Demonstration Alignment for phase-wise speed alignment between the two data sources across long-horizon tasks.
             During training, MimicSound adopts a shared audio-visual encoder: the vision module encodes top-view robot images or hand-masked human images to mitigate domain bias, while the shared audio encoder, based on a pretrained Audio Spectrogram Transformer (AST) fine-tuned via Weight-Decomposed Low-Rank Adaptation (DoRA), extracts unified auditory representations for both branches.
